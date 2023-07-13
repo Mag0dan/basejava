@@ -11,12 +11,17 @@ public class ArrayStorage {
     }
 
     void save(Resume r) {
-        storage[getNextIndex()] = r;
+        int nextIndex = getNextIndex();
+        if (nextIndex == storage.length) {
+            System.out.println("Storage is full. Can`s save your resume. Sorry");
+        } else {
+            storage[nextIndex] = r;
+        }
     }
 
     Resume get(String uuid) {
         for (Resume resume : storage) {
-            if (resume!= null && uuid.equals(resume.uuid))
+            if (resume != null && uuid.equals(resume.uuid))
                 return resume;
         }
         return null;
@@ -25,8 +30,8 @@ public class ArrayStorage {
     void delete(String uuid) {
         boolean deletedFlag = false;
         for (int i = 0; i < storage.length; i++) {
-            if(deletedFlag) {
-                storage[i-1] = storage[i];
+            if (deletedFlag) {
+                storage[i - 1] = storage[i];
             } else if (storage[i].uuid.equals(uuid)) {
                 storage[i] = null;
                 deletedFlag = true;
@@ -52,6 +57,6 @@ public class ArrayStorage {
             if (storage[i] == null)
                 return i;
         }
-        return storage.length-1;
+        return storage.length;
     }
 }
