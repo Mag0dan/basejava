@@ -1,6 +1,6 @@
-package com.urise.webapp.storage;
+package ru.javawebinar.basejava.storage;
 
-import com.urise.webapp.model.Resume;
+import ru.javawebinar.basejava.model.Resume;
 
 import java.util.Arrays;
 
@@ -31,7 +31,6 @@ public class ArrayStorage {
         }
         storage[size] = r;
         size++;
-
     }
 
     public void update(Resume r) {
@@ -45,8 +44,6 @@ public class ArrayStorage {
             return;
         }
         storage[index] = r;
-        System.out.println("Resume successfully saved");
-
     }
 
     public Resume get(String uuid) {
