@@ -74,11 +74,6 @@ public abstract class AbstractArrayStorage implements Storage {
         size--;
     }
 
-    @Override
-    public int getLimitSize() {
-        return STORAGE_LIMIT;
-    }
-
     protected abstract void fillDeletedElement(int index);
 
     protected abstract void insertElement(Resume r, int index);
