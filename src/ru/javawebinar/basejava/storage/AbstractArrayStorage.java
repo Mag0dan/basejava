@@ -11,7 +11,7 @@ import java.util.Arrays;
  * Array based storage for Resumes
  */
 public abstract class AbstractArrayStorage implements Storage {
-    protected static final int STORAGE_LIMIT = 100000;
+    protected static final int STORAGE_LIMIT = 10000;
 
     protected Resume[] storage = new Resume[STORAGE_LIMIT];
     protected int size = 0;
@@ -72,6 +72,11 @@ public abstract class AbstractArrayStorage implements Storage {
         fillDeletedElement(index);
         storage[size - 1] = null;
         size--;
+    }
+
+    @Override
+    public int getLimitSize() {
+        return STORAGE_LIMIT;
     }
 
     protected abstract void fillDeletedElement(int index);
