@@ -2,8 +2,7 @@ package ru.javawebinar.basejava.storage;
 
 import ru.javawebinar.basejava.model.Resume;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ListStorage extends AbstractStorage {
     private final List<Resume> storage = new ArrayList<>();
@@ -13,10 +12,10 @@ public class ListStorage extends AbstractStorage {
         storage.clear();
     }
 
-    @Override
-    public Resume[] getAll() {
-        return storage.toArray(new Resume[0]);
-    }
+//    @Override
+//    public Resume[] getAll() {
+//        return storage.toArray(new Resume[0]);
+//    }
 
     @Override
     public int size() {
@@ -31,6 +30,11 @@ public class ListStorage extends AbstractStorage {
             }
         }
         return -1;
+    }
+
+    @Override
+    protected List<Resume> getList() {
+        return new ArrayList<>(storage);
     }
 
     @Override

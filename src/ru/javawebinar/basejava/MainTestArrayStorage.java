@@ -24,7 +24,7 @@ public class MainTestArrayStorage {
 
         System.out.println("Get dummy: " + ARRAY_STORAGE.get("dummy"));
 
-        Resume r4 = new Resume("uuid3");
+        Resume r4 = new Resume("uuid3","asd");
         System.out.println("Before update uuid3: " + r3);
         ARRAY_STORAGE.update(r4);
         System.out.println("After update uuid3: " + r4);
@@ -39,8 +39,8 @@ public class MainTestArrayStorage {
     }
 
     static void printAll() {
-        System.out.println("\nGet All");
-        for (Resume r : ARRAY_STORAGE.getAll()) {
+        System.out.println("\nGet All Sorted");
+        for (Resume r : ARRAY_STORAGE.getAllSorted()) {
             System.out.println(r);
         }
     }
