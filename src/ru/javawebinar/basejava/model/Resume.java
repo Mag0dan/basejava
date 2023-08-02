@@ -43,6 +43,14 @@ public class Resume implements Comparable<Resume> {
         return sections.get(type);
     }
 
+    public void setSection(SectionType type, Section section) {
+        sections.put(type, section);
+    }
+
+    public void setContact(ContactType type, String contact) {
+        contacts.put(type, contact);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,8 +66,18 @@ public class Resume implements Comparable<Resume> {
 
     @Override
     public String toString() {
-        return uuid + '(' + fullName + ')';
+        return "Resume{" +
+                "uuid='" + uuid + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", contacts=" + contacts +
+                ", sections=" + sections +
+                '}';
     }
+
+    //    @Override
+//    public String toString() {
+//        return uuid + '(' + fullName + ')';
+//    }
 
     @Override
     public int compareTo(Resume o) {
