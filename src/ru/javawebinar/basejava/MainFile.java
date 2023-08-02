@@ -12,22 +12,25 @@ public class MainFile {
             throw new RuntimeException("Error", e);
         }
         File dir = new File("./src");
-        doi(dir);
+        printDeepDirectory(dir, "");
     }
 
-    public static void doi(File file) {
-        System.out.println("--------Start Folder" + file.getName() + "-------");
+    public static void printDeepDirectory(File file, String indent) {
+        System.out.println(indent + "Directory: " + file.getName());
+        indent = indent + "\t";
         final File[] files = file.listFiles();
-        if(files == null) {
+        if (files == null) {
             return;
         }
         for (File folderFile : files) {
-            if(folderFile.isDirectory()) {
-                doi(folderFile);
-            } else {
-                System.out.println(folderFile.getName());
+            if (!folderFile.isDirectory()) {
+                System.out.println(indent + "File: " + folderFile.getName());
             }
         }
-        System.out.println("---------End Folder" + file.getName() + "---------");
+        for (File folderFile : files) {
+            if (folderFile.isDirectory()) {
+                printDeepDirectory(folderFile, indent);
+            }
+        }
     }
 }

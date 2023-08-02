@@ -73,59 +73,58 @@ public class ResumeTestData {
 
     private static OrganizationSection experienceSection() {
         List<Organization> organizations = new ArrayList<>();
-        ArrayList<Activity> activities = new ArrayList<>();
+        ArrayList<Organization.Position> activities = new ArrayList<>();
 
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(2013, Month.OCTOBER),
                 DateUtil.of(2023, Month.AUGUST),
                 "Автор проекта.",
                 "Создание, организация и проведение Java онлайн проектов и стажировок."));
-        organizations.add(new Organization("Java Online Projects", "http://javaops.ru/", activities));
+        organizations.add(new Organization(new Link("Java Online Projects", "http://javaops.ru/"), activities));
 
         activities = new ArrayList<>();
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(2014, Month.OCTOBER),
                 DateUtil.of(2016, Month.JANUARY),
                 "Старший разработчик (backend)",
                 "Описание 2"));
-        organizations.add(new Organization("Wrike", "https://www.wrike.com/", activities));
+        organizations.add(new Organization(new Link("Wrike", "https://www.wrike.com/"), activities));
 
         return new OrganizationSection(organizations);
     }
 
     private static OrganizationSection educationSection() {
         List<Organization> organizations = new ArrayList<>();
-        ArrayList<Activity> activities = new ArrayList<>();
+        ArrayList<Organization.Position> activities = new ArrayList<>();
 
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(2013, Month.MARCH),
                 DateUtil.of(2013, Month.MAY),
                 "'Functional Programming Principles in Scala' by Martin Odersky",
                 null));
-        organizations.add(new Organization("Coursera", "https://www.coursera.org/course/progfun", activities));
+        organizations.add(new Organization(new Link("Coursera", "https://www.coursera.org/course/progfun"), activities));
 
         activities = new ArrayList<>();
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(2011, Month.MARCH),
                 DateUtil.of(2011, Month.APRIL),
                 "Курс 'Объектно-ориентированный анализ ИС. Концептуальное моделирование на UML.'",
                 null));
-        organizations.add(new Organization("Luxoft", "http://www.luxoft-training.ru/training/catalog/course.html?ID=22366", activities));
+        organizations.add(new Organization(new Link("Luxoft", "http://www.luxoft-training.ru/training/catalog/course.html?ID=22366"), activities));
 
         activities = new ArrayList<>();
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(1993, Month.SEPTEMBER),
                 DateUtil.of(1996, Month.JULY),
                 "Аспирантура (программист С, С++)",
                 null));
-        activities.add(new Activity(
+        activities.add(new Organization.Position(
                 DateUtil.of(1987, Month.SEPTEMBER),
                 DateUtil.of(1993, Month.JULY),
                 "Инженер (программист Fortran, C)",
                 null));
         organizations.add(new Organization(
-                "Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики",
-                "http://www.ifmo.ru/",
+                new Link("Санкт-Петербургский национальный исследовательский университет информационных технологий, механики и оптики", "http://www.ifmo.ru/"),
                 activities));
 
         return new OrganizationSection(organizations);

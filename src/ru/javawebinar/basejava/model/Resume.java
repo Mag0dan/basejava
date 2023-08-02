@@ -1,20 +1,20 @@
 package ru.javawebinar.basejava.model;
 
-import java.util.*;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Resume class
  */
 public class Resume implements Comparable<Resume> {
-
     // Unique identifier
     private final String uuid;
     private final String fullName;
 
     private final Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
     private final Map<SectionType, Section> sections = new EnumMap<>(SectionType.class);
-
-
 
     public Resume(String fullName) {
         this(UUID.randomUUID().toString(), fullName);
