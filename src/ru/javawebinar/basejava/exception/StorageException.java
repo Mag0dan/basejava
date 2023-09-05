@@ -5,7 +5,10 @@ public class StorageException extends RuntimeException {
 
     public StorageException(String message) {
         this(message, null, null);
+    }
 
+    public StorageException(Exception e) {
+        this(e.getMessage(), e);
     }
 
     public StorageException(String message, String uuid) {

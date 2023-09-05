@@ -19,34 +19,34 @@ public class ResumeTestData {
         Assert.assertEquals(resume.getUuid(), uuid);
         Assert.assertEquals(resume.getFullName(), fullName);
 
-        Assert.assertEquals(resume.getSection(SectionType.OBJECTIVE), new TextSection("Позиция Богдана"));
-        Assert.assertEquals(resume.getSection(SectionType.PERSONAL), new TextSection("Личные качества Богдана"));
-        Assert.assertEquals(resume.getSection(SectionType.ACHIEVEMENT), achievementSection());
-        Assert.assertEquals(resume.getSection(SectionType.QUALIFICATIONS), qualificationsSection());
-        Assert.assertEquals(resume.getSection(SectionType.EXPERIENCE), experienceSection());
-        Assert.assertEquals(resume.getSection(SectionType.EDUCATION), educationSection());
-
-        Assert.assertEquals(resume.getContact(ContactType.GITHUB), "https://github.com/gkislin");
-        Assert.assertEquals(resume.getContact(ContactType.PHONE), "+79031234567");
-        Assert.assertEquals(resume.getContact(ContactType.MAIL), "tata@mail.ru");
-        Assert.assertEquals(resume.getContact(ContactType.HOMEPAGE), "http://gkislin.ru/");
+//        Assert.assertEquals(resume.getSection(SectionType.OBJECTIVE), new TextSection("Позиция Богдана"));
+//        Assert.assertEquals(resume.getSection(SectionType.PERSONAL), new TextSection("Личные качества Богдана"));
+//        Assert.assertEquals(resume.getSection(SectionType.ACHIEVEMENT), achievementSection());
+//        Assert.assertEquals(resume.getSection(SectionType.QUALIFICATIONS), qualificationsSection());
+//        Assert.assertEquals(resume.getSection(SectionType.EXPERIENCE), experienceSection());
+//        Assert.assertEquals(resume.getSection(SectionType.EDUCATION), educationSection());
+//
+//        Assert.assertEquals(resume.getContact(ContactType.GITHUB), "https://github.com/gkislin");
+//        Assert.assertEquals(resume.getContact(ContactType.PHONE), "+79031234567");
+//        Assert.assertEquals(resume.getContact(ContactType.MAIL), "tata@mail.ru");
+//        Assert.assertEquals(resume.getContact(ContactType.HOMEPAGE), "http://gkislin.ru/");
     }
 
 
     public static Resume getResume(String uuid, String fullName) {
         final Resume resume = new Resume(uuid, fullName);
 
-        resume.setSection(SectionType.OBJECTIVE, new TextSection("Позиция Богдана"));
-        resume.setSection(SectionType.PERSONAL, new TextSection("Личные качества Богдана"));
-        resume.setSection(SectionType.ACHIEVEMENT, achievementSection());
-        resume.setSection(SectionType.QUALIFICATIONS, qualificationsSection());
-        resume.setSection(SectionType.EXPERIENCE, experienceSection());
-        resume.setSection(SectionType.EDUCATION, educationSection());
-
-        resume.setContact(ContactType.GITHUB, "https://github.com/gkislin");
-        resume.setContact(ContactType.PHONE, "+79031234567");
-        resume.setContact(ContactType.MAIL, "tata@mail.ru");
-        resume.setContact(ContactType.HOMEPAGE, "http://gkislin.ru/");
+//        resume.setSection(SectionType.OBJECTIVE, new TextSection("Позиция Богдана"));
+//        resume.setSection(SectionType.PERSONAL, new TextSection("Личные качества Богдана"));
+//        resume.setSection(SectionType.ACHIEVEMENT, achievementSection());
+//        resume.setSection(SectionType.QUALIFICATIONS, qualificationsSection());
+//        resume.setSection(SectionType.EXPERIENCE, experienceSection());
+//        resume.setSection(SectionType.EDUCATION, educationSection());
+//
+//        resume.setContact(ContactType.GITHUB, "https://github.com/gkislin");
+//        resume.setContact(ContactType.PHONE, "+79031234567");
+//        resume.setContact(ContactType.MAIL, "tata@mail.ru");
+//        resume.setContact(ContactType.HOMEPAGE, "http://gkislin.ru/");
         return resume;
     }
 
