@@ -26,10 +26,10 @@ public class ResumeTestData {
 //        Assert.assertEquals(resume.getSection(SectionType.EXPERIENCE), experienceSection());
 //        Assert.assertEquals(resume.getSection(SectionType.EDUCATION), educationSection());
 //
-//        Assert.assertEquals(resume.getContact(ContactType.GITHUB), "https://github.com/gkislin");
-//        Assert.assertEquals(resume.getContact(ContactType.PHONE), "+79031234567");
-//        Assert.assertEquals(resume.getContact(ContactType.MAIL), "tata@mail.ru");
-//        Assert.assertEquals(resume.getContact(ContactType.HOMEPAGE), "http://gkislin.ru/");
+        Assert.assertEquals(resume.getContact(ContactType.GITHUB), "https://github.com/gkislin");
+        Assert.assertEquals(resume.getContact(ContactType.PHONE), "+79031234567");
+        Assert.assertEquals(resume.getContact(ContactType.MAIL), "tata@mail.ru");
+        Assert.assertEquals(resume.getContact(ContactType.HOMEPAGE), "http://gkislin.ru/");
     }
 
 
@@ -43,10 +43,10 @@ public class ResumeTestData {
 //        resume.setSection(SectionType.EXPERIENCE, experienceSection());
 //        resume.setSection(SectionType.EDUCATION, educationSection());
 //
-//        resume.setContact(ContactType.GITHUB, "https://github.com/gkislin");
-//        resume.setContact(ContactType.PHONE, "+79031234567");
-//        resume.setContact(ContactType.MAIL, "tata@mail.ru");
-//        resume.setContact(ContactType.HOMEPAGE, "http://gkislin.ru/");
+        resume.setContact(ContactType.GITHUB, "https://github.com/gkislin");
+        resume.setContact(ContactType.PHONE, "+79031234567");
+        resume.setContact(ContactType.MAIL, "tata@mail.ru");
+        resume.setContact(ContactType.HOMEPAGE, "http://gkislin.ru/");
         return resume;
     }
 
